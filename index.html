@@ -101,6 +101,24 @@
         .timeline-card .subtitle { font-size:.95rem;font-weight:600;color:#2563eb;margin-bottom:.8rem; }
         .timeline-card p { font-size:.88rem;color:#666;line-height:1.7; }
 
+        /* ── Skill Cards ── */
+        .skill-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:4rem; }
+        .skill-card { background:rgba(255,255,255,.8);backdrop-filter:blur(10px);border-radius:20px;padding:1.8rem;border:1px solid rgba(59,130,246,.12);box-shadow:0 4px 16px rgba(30,58,138,.06);transition:all .3s ease; }
+        .skill-card:hover { transform:translateY(-5px);box-shadow:0 12px 28px rgba(59,130,246,.14); }
+        .skill-card-title { font-family:'Epilogue',sans-serif;font-size:.95rem;font-weight:700;color:#475569;margin-bottom:1.1rem;letter-spacing:.02em; }
+        .skill-tags { display:flex;flex-wrap:wrap;gap:.5rem; }
+        .skill-tag { font-size:.78rem;font-weight:600;padding:.4rem .9rem;border-radius:99px;border:1.5px solid;transition:all .25s ease; }
+        .skill-tag:hover { transform:translateY(-2px) scale(1.05); }
+        .tag-ai     { border-color:#ffb347;color:#c45c00;background:#fff8f0; }
+        .tag-ps     { border-color:#7ec8f7;color:#005fa3;background:#f0f8ff; }
+        .tag-pr     { border-color:#b3b3ff;color:#4444aa;background:#f5f5ff; }
+        .tag-css    { border-color:#93c5fd;color:#1e3a8a;background:#eff6ff; }
+        .tag-html   { border-color:#fdb07e;color:#9a3412;background:#fff7ed; }
+        .tag-wp     { border-color:#7ec8e0;color:#0d4f6e;background:#f0faff; }
+        .tag-claude { border-color:#c4b5fd;color:#5b21b6;background:#f5f3ff; }
+        .tag-notion { border-color:#d1d5db;color:#374151;background:#f9fafb; }
+        @media(max-width:900px){ .skill-cards{grid-template-columns:1fr} }
+
         /* ── Interests Grid ── */
         .interests-section { padding:8rem 4rem;max-width:1400px;margin:0 auto; }
         .interests-description { max-width:800px;margin:2rem auto 4rem;font-size:1.05rem;line-height:2.2;letter-spacing:.02em;color:#555;text-align:center; }
@@ -256,7 +274,34 @@
         </div></div>
     </div>
 </section>
-
+<!-- ── SKILLS ── -->
+<div style="max-width:1400px;margin:0 auto;padding:0 4rem 6rem">
+    <div class="skill-cards">
+        <div class="skill-card">
+            <div class="skill-card-title">🎨 Design Tools</div>
+            <div class="skill-tags">
+                <span class="skill-tag tag-ai">Illustrator</span>
+                <span class="skill-tag tag-ps">Photoshop</span>
+                <span class="skill-tag tag-pr">Premiere</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-card-title">💻 Development</div>
+            <div class="skill-tags">
+                <span class="skill-tag tag-html">HTML</span>
+                <span class="skill-tag tag-css">CSS3</span>
+                <span class="skill-tag tag-wp">WordPress</span>
+            </div>
+        </div>
+        <div class="skill-card">
+            <div class="skill-card-title">🛠 Daily Tools</div>
+            <div class="skill-tags">
+                <span class="skill-tag tag-claude">Claude</span>
+                <span class="skill-tag tag-notion">Notion</span>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- ── INTERESTS ── -->
 <section class="interests-section" id="interests">
     <h2 class="section-title">My Interests</h2>
